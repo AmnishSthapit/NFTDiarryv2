@@ -1,0 +1,19 @@
+
+.animation{
+    @apply absolute ;
+    // right: calc(0% - 340px);
+    right: 17%;
+    width: 520px;
+    top: 9%;
+}
+
+.blink-me {
+    @apply inline-block h-4 w-4 bg-green-500 rounded-full ;
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

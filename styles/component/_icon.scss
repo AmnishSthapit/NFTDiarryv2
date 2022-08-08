@@ -1,0 +1,6 @@
+.social{
+    @apply flex;
+    &-icon{
+        @apply h-10 w-10 rounded-md bg-blue-800 text-white flex justify-center items-center mr-2;
+    }
+}

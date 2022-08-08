@@ -1,0 +1,14 @@
+@tailwind base;
+
+@import "base/index.scss";
+
+@tailwind components;
+
+@import "component/index.scss";
+
+@tailwind utilities;
+
+@import "page/index.scss";
+
+@import "vendor/index.scss";
+

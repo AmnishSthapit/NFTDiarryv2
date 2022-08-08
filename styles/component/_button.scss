@@ -1,0 +1,81 @@
+.btn {
+    @apply rounded-lg w-full px-12 py-6 h-16 ;
+
+    &-primary {
+        @apply text-white font-normal ;
+    }
+
+    &-secondary {
+        @apply text-white font-normal ;
+    }
+
+    &-link {
+        @apply text-blue-900 capitalize text-base font-normal p-0;
+        height: 30px;
+    }
+
+    &-outline {
+        @apply border-white text-white hover:text-blue-900 hover:bg-white px-6 font-normal ;
+
+        &:hover {
+            svg {
+                path {
+                    stroke: #000 !important;
+                }
+            }
+        }
+    }
+&-sm{
+    @apply px-3 py-4 h-12;
+
+}
+    @screen md {
+        @apply w-auto;
+    }
+}
+
+.toggler-button {
+    @apply fixed bg-blue-800 w-16 h-16 rounded-full right-4 top-4 z-20 px-4 py-5 lg:hidden;
+}
+
+.toggler {
+    @apply h-6 w-8 relative p-1 cursor-pointer lg:hidden;
+
+    &::before,
+    &::after {
+        content: '';
+        @apply absolute right-0 rounded-full transition-all duration-300 ease-in-out;
+        height: 3px;
+        background-color: #fff;
+    }
+
+    &::before {
+        @apply top-0 w-full;
+        box-shadow: 0 12px 0px #fff;
+
+    }
+
+    &::after {
+        @apply top-full w-3/4;
+
+    }
+
+    @screen lg {
+        // @apply hidden
+    }
+
+    &.open {
+        &::before {
+            transform: rotate(45deg);
+            box-shadow: none;
+            top: 10px;
+        }
+
+        &::after {
+            @apply w-full;
+            transform: rotate(135deg);
+            top: 10px;
+
+        }
+    }
+}

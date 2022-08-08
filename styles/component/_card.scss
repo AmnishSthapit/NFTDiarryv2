@@ -1,0 +1,67 @@
+.card {
+    @apply mx-2 bg-white rounded-lg p-4 ;
+    min-width: 320px;
+
+    @media screen and (min-width:992px) {
+        @apply mx-1;
+        max-width: 320px;
+        &-lg{
+        max-width: 390px;
+        }
+    }
+
+    &-body {
+        @apply px-3;
+        margin-top: -4.5rem;
+    }
+
+    &-logo {
+        @apply h-20 w-20 flex justify-center rounded-full overflow-hidden mx-auto border-4 border-slate-700 relative z-10;
+    }
+
+    &-text {
+        @apply text-sm max-h-10;
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+    &-icon{
+        @apply mb-7 w-16 h-16 rounded-md bg-blue-800 items-center flex flex-col justify-center
+    }
+    .figure{
+        @apply max-h-52 overflow-hidden rounded-lg;
+    }
+}
+.quote-icon{
+    @apply bg-blue-800 text-white rounded-full
+}
+
+.media{
+    @apply flex flex-col mx-2 bg-white rounded-lg p-4;
+    .figure{
+        @apply w-full h-56 overflow-hidden rounded-lg relative;
+    }
+    @screen xl{
+        @apply flex-row;
+        .figure{
+            @apply w-40 h-48;
+            &-sm{
+                @apply w-64 h-48; 
+            }
+            &-lg{
+                @apply w-72 h-56; 
+
+            }
+        }
+    }
+}
+
+.box{
+    @apply mx-2 bg-white rounded-lg p-4 border border-slate-200;
+    &-filled{
+        @apply bg-slate-50;
+    }
+}

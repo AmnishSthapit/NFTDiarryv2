@@ -1,0 +1,7 @@
+.course{
+&-sidebar{
+    &-box{
+        @apply p-8 bg-slate-100 rounded-md;
+    }
+}
+}

@@ -1,0 +1,10 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  .offset{ 
+    padding: 0;
+    @screen lg{
+      padding-top: 70px;
+    }
+  }

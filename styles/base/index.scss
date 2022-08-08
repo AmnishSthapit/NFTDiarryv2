@@ -1,0 +1,181 @@
+@import 'typography';
+
+@layer base {
+    html {
+        @apply font-Euclid;
+    }
+
+    body {
+        @apply text-slate-900 overflow-x-hidden bg-white  min-w-full;
+    }
+
+    #wrapper {
+        @apply flex flex-col relative ;
+        min-width:375px;
+       
+    }
+
+    main {
+        @apply flex-1
+    }
+
+    section {
+        @apply py-8;
+
+        @screen lg {
+            @apply py-24;
+        }
+    }
+
+    p {
+        @apply mb-6;
+    }
+
+    .phd-container {
+        @apply container mx-auto
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply text-gray-900;
+    }
+
+    h1 {
+        @apply text-3xl font-bold mb-3;
+
+        @screen md {
+            @apply text-3xl leading-snug;
+
+        }
+
+        @screen lg {
+            @apply text-5xl leading-tight;
+        }
+    }
+
+    h2 {
+        @apply text-2xl font-bold  relative py-1 mb-8 pl-5 border-l-4 border-blue-900;
+
+        @screen lg {
+            @apply text-3xl;
+        }
+
+        &.no-border {
+            @apply pb-0;
+
+            &::before {
+                @apply hidden;
+            }
+        }
+
+
+    }
+
+    h3 {
+        @apply text-lg font-semibold mb-3;
+
+        @screen lg {
+            @apply text-xl;
+        }
+    }
+
+    h4 {
+        @apply text-xl font-semibold;
+    }
+
+    h5 {
+        @apply text-base font-semibold mb-3;
+    }
+
+    svg {
+        @apply inline-block;
+    }
+
+    .right-angle {
+        position: relative;
+        @apply my-28;
+
+        &::before,
+        &::after {
+            content: "";
+            @apply absolute h-0 w-full;
+            border-style: solid;
+            border-width: 60px 0 0 100vw;
+
+            @screen lg {
+                border-width: 140px 0 0 100vw;
+            }
+        }
+
+        &::before {
+            @apply bottom-full;
+            border-color: transparent transparent transparent rgb(17 24 39);
+        }
+
+        &::after {
+            @apply top-full;
+            border-color: rgb(17 24 39) transparent transparent transparent;
+        }
+
+        &-bottom {
+            @apply mt-0;
+
+            &::before {
+                @apply hidden;
+            }
+        }
+
+        &-top {
+            @apply mb-0;
+
+            &::after {
+                @apply hidden;
+            }
+        }
+    }
+
+}
+
+.container {
+    padding: 0 1rem !important;
+
+    @screen lg {
+        max-width: 1340px !important;
+    }
+}
+
+
+
+.left-2\/12 {
+    @screen xl {
+        left: 10%;
+    }
+}
+
+.list {
+    @apply pl-8;
+
+    li {
+        @apply pb-4 relative;
+
+        &:before {
+            position: absolute;
+            left: -25px;
+            content: '✓';
+            @apply text-gray-900 font-semibold;
+        }
+    }
+}
+
+.dropdown-content {
+    top: 100%;
+    // left: -115px;
+    @apply max-w-xs;
+
+    @screen lg {
+        @apply w-60 right-0 top-12;
+    }
+}
