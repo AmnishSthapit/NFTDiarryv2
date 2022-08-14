@@ -50,8 +50,11 @@ export const About = () => {
             <h2 className="">Sponsored</h2>
             {data.data?.length > 0 && (
               <div className="flex lg:flex-row flex-col justify-center items-center ">
-                <VerticalNFTCard nft={data?.data[0]?.attributes} />
-                <div className="grid grid-cols-2">
+                  <VerticalNFTCard
+                    nft={data?.data[0]?.attributes}
+                    bg="white"
+                  />
+                <div className="grid grid-cols-2 gap-4 mt-2 lg:ml-2">
                   {data?.data?.slice(1, 5).map((grid, i) => (
                     <div key={i}>
                       <VerticalNFTGridCard nft={grid.attributes} />

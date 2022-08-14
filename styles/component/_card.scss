@@ -40,7 +40,7 @@
 }
 
 .media{
-    @apply flex flex-col mx-2 bg-white rounded-lg p-4;
+    @apply flex flex-col bg-white rounded-lg p-4;
     .figure{
         @apply w-full h-56 overflow-hidden rounded-lg relative;
     }

@@ -43,6 +43,7 @@ export const Banner = ({ homepageData }) => {
               {banner_nfts.map((nft, index) => (
                 <VerticalNFTCard
                   nft={nft.nft.data.attributes}
+                  bg="bg-violet-50"
                   key={"nftt" + index}
                 />
               ))}

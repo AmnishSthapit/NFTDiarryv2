@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { getStrapiMedia } from "lib/media";
 
-const VerticalNFTCard = ({ nft }) => {
+const VerticalNFTCard = ({ nft, bg }) => {
   return (
-    <div className="card mb-10 md:mb-0 bg-violet-50">
+    <div className={`card mb-10 md:mb-0 ${bg}`}>
       <figure className="figure relative">
         {nft.display_image && (
           <img
