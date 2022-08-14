@@ -30,8 +30,6 @@ export const About = () => {
     }).then((res) => setData(res?.data?.attributes?.sponsored_nfts?.nfts));
   }, []);
 
-  console.log(data);
-
   return (
     <>
       <section className="relative z-10 pt-0">
