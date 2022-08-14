@@ -11,6 +11,8 @@ import "../styles/style.scss";
 function MyApp({ Component, pageProps }) {
   const { globalData } = pageProps;
 
+  console.log(globalData, pageProps);
+
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
