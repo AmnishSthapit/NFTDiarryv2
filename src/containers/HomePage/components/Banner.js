@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import VerticalNFTCard from "@/components/VerticalNFTCard";
 
-export const Banner = ({homepageData}) => {
+export const Banner = ({ homepageData }) => {
   var settings = {
     fade: true,
     dots: false,
@@ -30,10 +30,7 @@ export const Banner = ({homepageData}) => {
             <span className="text-blue-900 text-2xl font-medium">
               {banner_subtitle}
             </span>
-            <h1 className="my-9">
-            {banner_title}
-              
-            </h1>
+            <h1 className="my-9">{banner_title}</h1>
             <div className="flex md:flex-row flex-col justify-start">
               <a className="btn btn-primary md:mr-10 mb-10 mdLmb-0">
                 {banner_button_text}
@@ -43,10 +40,13 @@ export const Banner = ({homepageData}) => {
           </div>
           <div className="col-span-3">
             <div className="grid md:grid-cols-2 grid-cols-1">
-              {
-                banner_nfts.map((nft, index)=><VerticalNFTCard nft={nft} key={"nftt"+index}/>)
-              }
-              
+              {banner_nfts.map((nft, index) => (
+                <VerticalNFTCard
+                  nft={nft.nft.data.attributes}
+                  bg="bg-violet-50"
+                  key={"nftt" + index}
+                />
+              ))}
             </div>
           </div>
         </div>
