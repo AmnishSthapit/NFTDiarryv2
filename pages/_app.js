@@ -25,10 +25,10 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="keywords" content="website, blog, foo, bar" />
-        <title>{globalData.attributes.siteName}</title>
+        <title>{globalData?.attributes.siteName}</title>
 				<meta
 					name="description"
-					content={globalData.attributes.siteDescription}
+					content={globalData?.attributes.siteDescription}
 				/>
 
 				<link

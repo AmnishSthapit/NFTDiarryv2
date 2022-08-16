@@ -36,7 +36,7 @@ export async function getStaticPaths() {
   });
 
   const paths = res.data.map((nft) => ({
-    params: { slug: nft.attributes.slug },
+    params: { slug: nft?.attributes?.slug },
   }));
   return { paths, fallback: true };
 }
@@ -55,8 +55,8 @@ export async function getStaticProps({ params }) {
   ]);
   return {
     props: {
-      nftData: nftRes.data[0],
-      footerData: footerRes.data,
+      nftData: nftRes?.data[0],
+      footerData: footerRes?.data,
     },
     revalidate: 1,
   };
