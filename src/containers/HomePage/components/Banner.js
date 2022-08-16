@@ -42,7 +42,7 @@ export const Banner = ({ homepageData }) => {
             <div className="grid md:grid-cols-2 grid-cols-1">
               {banner_nfts.map((nft, index) => (
                 <VerticalNFTCard
-                  nft={nft.nft.data.attributes}
+                  nft={nft?.nft?.data?.attributes}
                   bg="bg-violet-50"
                   key={"nftt" + index}
                 />

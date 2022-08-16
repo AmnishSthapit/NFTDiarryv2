@@ -22,8 +22,6 @@ export const Calendar = () => {
     }).then((res) => setAll(res?.data));
   }, []);
 
-  console.log(all);
-
   return (
     <>
       <section className="relative">

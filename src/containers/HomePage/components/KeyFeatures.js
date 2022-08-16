@@ -51,8 +51,6 @@ export const KeyFeatures = () => {
     }).then((res) => setUpcoming(res?.data?.attributes?.upcoming_nfts?.nfts));
   }, []);
 
-  console.log(popular, upcoming)
-
   return (
     <>
       <section className="relative">
