@@ -7,6 +7,8 @@ import Head from "next/head";
 
 const NFTDetailPage = ({ nftData, footerData }) => {
 
+  console.log(nftData, footerData);
+
   const router = useRouter();
   let loading = router.isFallback;
 
@@ -55,7 +57,7 @@ export async function getStaticProps({ params }) {
   ]);
   return {
     props: {
-      nftData: nftRes?.data[0],
+      nftData: nftRes?.data,
       footerData: footerRes?.data,
     },
     revalidate: 1,
