@@ -6,7 +6,7 @@ import { getStrapiMedia } from "lib/media";
 
 const VerticalNFTGridCard = ({ nft }) => {
   return (
-    <div classname="flex">
+    <div className="flex">
       <div className="media">
         <figure className="figure relative flex flex-col justify-center bg-black">
           {nft.display_image && (
