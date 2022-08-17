@@ -6,7 +6,7 @@ import { getStrapiMedia } from "lib/media";
 
 export default function Home(props) {
   const seo =
-    props.homepageData.attributes.seo || props.globalData.attributes.defaultSeo;
+    props?.homepageData?.attributes.seo || props?.globalData?.attributes?.defaultSeo;
   return (
     <AppWrapper footerData={props.footerData}>
       <Head>
