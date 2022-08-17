@@ -8,15 +8,15 @@ export const Community = () => {
     <>
       <section className="py-0 ">
         <div className="container mx-auto">
-          <div className="rounded-lg bg-slate-900 py-20 text-center">
+          <div className="rounded-lg bg-slate-900 py-20 px-6 text-center">
             <h3 className="text-white text-3xl">JOIN OUR COMMUNITY</h3>
             <p className="text-white text-xl">
               {" "}
               NFT Drops, News, Giveaways, Digital Art Daily Alerts &amp;
               Insights
             </p>
-            <div className="flex items-center justify-center">
-              <button className="btn bg-white text-slate-900 hover:bg-gray-100 flex items-center py-3 mx-5 px-4">
+            <div className="flex flex-col lg:flex-row items-center justify-center">
+              <button className="btn bg-white text-slate-900 hover:bg-gray-100 flex items-center py-3 mx-5 px-4 mb-3 md:mb-0">
                 <Icon
                   icon="dashicons:twitter"
                   height={40}
@@ -25,7 +25,7 @@ export const Community = () => {
                 />
                 Join us on Twitter
               </button>
-              <button className="btn bg-white text-slate-900 hover:bg-gray-100 flex items-center py-3 mx-5 px-4">
+              <button className="btn bg-white text-slate-900 hover:bg-gray-100 flex items-center py-3 mx-5 px-4 mb-3 md:mb-0">
                 <Icon
                   icon="dashicons:instagram"
                   height={40}

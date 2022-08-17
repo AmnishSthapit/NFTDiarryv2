@@ -165,3 +165,13 @@
   backdrop-filter: blur(20px);
   border-radius: 20px;
 }
+
+
+.truncate-overflow p{
+  width:100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+

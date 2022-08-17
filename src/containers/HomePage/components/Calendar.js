@@ -29,7 +29,7 @@ export const Calendar = () => {
           <div className="">
             <h2>#1 NFT Calendar</h2>
           </div>
-          <div className="flex items-start mt-10 ">
+          <div className="flex flex-col lg:flex-row items-start mt-10 ">
             <div className="calendar-list mr-8 w-full">
               {all.length > 0 &&
                 all?.map((nft, i) => (
@@ -64,62 +64,79 @@ export const Calendar = () => {
                         </div>
                       </div>
                       <div
-                        className="mb-0"
+                        className="mb-0 truncate-overflow"
                         dangerouslySetInnerHTML={{
                           __html: nft.attributes.description,
                         }}
                       ></div>
-                      <div className="grid grid-cols-4 gap-x-8 py-2">
-                        <div className="border-r border-gray-300">
+                      <div className="grid lg:grid-cols-4 grid-cols-2 gap-x-8 py-2">
+                        <div className="border-r border-gray-300 mb-2 md:mb-0">
                           <span className="text-slate-500">Blockchain </span>
                           <div className="font-semibold text-lg">Ethereum</div>
                         </div>
-                        <div className="border-r border-gray-300">
+                        <div className="md:border-r border-gray-300 mb-2  md:mb-0">
                           <span className="text-slate-500">Mint Price </span>
                           <div className="font-semibold text-lg">
                             {nft.attributes.public_mint_price}
                           </div>
                         </div>
-                        <div className="border-r border-gray-300">
+                        <div className="border-r border-gray-300 mb-2  md:mb-0">
                           <span className="text-slate-500">Supply </span>
                           <div className="font-semibold text-lg">
                             {nft.attributes.maximum_supply}
                           </div>
                         </div>
-                        <div className="">
+                        <div className=" mb-2 md:mb-0">
                           <span className="text-slate-500">Public sale </span>
                           <div className="font-semibold text-lg">
                             {nft.attributes.public_mint_price}
                           </div>
                         </div>
                       </div>
-                      <div className="flex items-center mt-3">
-                        <div className="flex items-center">
-                          <div className="icon w-5 h-5 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
-                            <Icon
-                              height={16}
-                              icon="bxl:twitter"
-                              className="text-white"
-                            />
-                          </div>
-                          <span className="pl-1 font-bold text-sm">23.3K</span>
+                      <div className="flex flex-col md:flex-row md:items-center mt-3">
+                        <div className="flex items-center mb-3 md:mb-0">
+                          <a className="w-1/2 md:w-auto" href="">
+                            <div className="p-2 rounded-sm border border-slate-2 bg-white flex items-center hover:border-violet-400 ">
+                              <div className="icon w-6 h-6 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
+                                <Icon
+                                  height={32}
+                                  icon="bxl:twitter"
+                                  className="text-white"
+                                />
+                              </div>
+                              <span className="text-sm pl-2">Twitter</span>
+                            </div>
+                          </a>
+
+                          <a className="w-1/2 md:w-auto" href="">
+                            <div className="p-2 ml-2 rounded-sm border border-slate-2 bg-white flex items-center hover:border-violet-400">
+                              <div className="icon w-6 h-6 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
+                                <Icon
+                                  height={32}
+                                  icon="bxl:discord-alt"
+                                  className="text-white"
+                                />
+                              </div>
+                              <span className="text-sm pl-2">Discord</span>
+                            </div>
+                          </a>
                         </div>
-                        <div className="flex items-center pl-3">
-                          <div className="icon w-5 h-5 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
+                        <div className="md:ml-auto ml-0 flex ">
+                          <div className="flex items-center border border-rose-400 bg-white px-3 py-2 mr-3 cursor-pointer rounded-sm  w-1/2 md:w-auto mb-2 md:mb-0">
                             <Icon
-                              height={16}
-                              icon="bxl:discord-alt"
-                              className="text-white"
+                              className="text-rose-400"
+                              height={22}
+                              icon="ant-design:heart-outlined"
                             />
+                            <div className="text-rose-400 pl-1">Vote</div>
                           </div>
-                          <span className="pl-1 font-bold text-sm">23.3K</span>
-                        </div>
-                        <div className="ml-auto">
-                          <Link href={"/detail/" + nft.attributes.slug}>
-                            <a className="btn btn-primary btn-sm">
-                              View Detail
-                            </a>
-                          </Link>
+                          <div className="w-1/2 md:w-auto">
+                            <Link href={"/detail/" + nft.attributes.slug}>
+                              <a className="btn btn-primary btn-sm ">
+                                View Detail
+                              </a>
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </div>
