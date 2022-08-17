@@ -36,7 +36,7 @@ export const Header = () => {
               <div className="">
                 <Link href="/">
                   <a>
-                    <img src={images.logo.src} alt="" />
+                    <img className="h-24" src={images.logo.src} alt="" />
                   </a>
                 </Link>
               </div>
@@ -44,19 +44,19 @@ export const Header = () => {
                 className={`nav-menu menu-horizontal  flex flex-col lg:flex-row justify-center px-3 lg:px-0 ml-auto items-center ${
                   isNavOpen ? "active" : ""
                 }
-                `}
+              `}
               >
                 <li className="nav-link hidden lg:block">
-                  <Link href="/">About </Link>
+                  <Link href="/about">About </Link>
                 </li>
                 <li className="nav-link hidden lg:block">
-                  <Link href="/">Contact </Link>
+                  <Link href="/contact">Contact </Link>
                 </li>
 
                 <li className="nav-link hidden lg:block">
                   <Link
                     target="_blank"
-                    href="https://forms.clickup.com/f/3feky-8681/GSSEQN7P7QHKDH0Y39"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSf7ZbbO371FyVzbedQmE3O4M2QZ4iT7Kthy46WzQ-qkA92zAA/viewform?usp=sf_link"
                   >
                     <a className="btn btn-primary btn-sm">
                       Submit Your Project
@@ -88,6 +88,7 @@ export const Header = () => {
                 icon="gridicons:cross"
                 onClick={() => {
                   setIsSidebarOpen((prevState) => {
+                    console.log(prevState);
                     return !prevState;
                   });
                 }}
@@ -96,36 +97,31 @@ export const Header = () => {
             <div className="grid md:grid-cols-4 lg:grid-cols-5 grid-cols-1 h-screen">
               <div className="lg:p-20 px-6 pb-6 pt-12 md:col-span-2  lg:col-span-3">
                 <div className="grid grid-cols-2 md:gap-20 gap-4 md:h-full h-auto md:pb-36">
+                  <div className="hidden lg:block">
+                    <h3 className="text-center">Promote Your NFT</h3>
+                    <img
+                      src="https://img.freepik.com/free-photo/picture-with-drawing-man-s-face_1122-1031.jpg?w=826&t=st=1660063683~exp=1660064283~hmac=5150596e7bb75ee1eea3bd30189a8db5de8181e9499a6e797f0f2718b778165f"
+                      className="img-fluid"
+                      alt=""
+                    />
+                  </div>
+
                   <ul className="flex flex-col h-full justify-end">
                     <li className=" lg:pl-6 pl-0 text-primary font-bold">
                       Event feed{" "}
                     </li>
 
                     <li className="nav-link">
-                      <Link href="/">Today</Link>{" "}
+                      <Link href="/upcoming">Upcoming</Link>{" "}
                     </li>
                     <li className="nav-link">
-                      <Link href="/">Upcoming</Link>{" "}
+                      <Link href="/about">About</Link>{" "}
                     </li>
                     <li className="nav-link">
-                      <Link href="/">Ongoing</Link>{" "}
+                      <Link href="/contact">Contact</Link>{" "}
                     </li>
                     <li className="nav-link">
-                      <Link href="/">Newest</Link>{" "}
-                    </li>
-                  </ul>
-                  <ul className="flex flex-col  h-full justify-end">
-                    <li className="md:text-xl md:py-3 py-2">
-                      <Link href="/">About</Link>{" "}
-                    </li>
-                    <li className="md:text-xl md:py-3 py-2">
-                      <Link href="/">News</Link>{" "}
-                    </li>
-                    <li className="md:text-xl md:py-3 py-2">
-                      <Link href="/">MediaX Agency</Link>{" "}
-                    </li>
-                    <li className="md:text-xl md:py-3 py-2">
-                      <Link href="/">Contact</Link>
+                      <a href="">Free Mint</a>{" "}
                     </li>
                   </ul>
                 </div>
@@ -139,7 +135,7 @@ export const Header = () => {
                   </h3>
                   <Link
                     target="_blank"
-                    href="https://forms.clickup.com/f/3feky-8681/GSSEQN7P7QHKDH0Y39"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSf7ZbbO371FyVzbedQmE3O4M2QZ4iT7Kthy46WzQ-qkA92zAA/viewform?usp=sf_link"
                   >
                     <a className="btn btn-outline rounded-full btn-sm px-8 font-bold">
                       Submit Project
@@ -148,13 +144,6 @@ export const Header = () => {
                 </div>
                 <div className="md:mt-20 mt-10">
                   <h5 className="text-white text-xl">Join our Community</h5>
-                  <a href="#" target="_blank" rel="noreferrer">
-                    <Icon
-                      icon="dashicons:facebook-alt"
-                      height={50}
-                      className="text-white hover:text-white transition-all pr-4"
-                    />
-                  </a>
                   <a
                     href="https://twitter.com/nft_dairy"
                     target="_blank"
