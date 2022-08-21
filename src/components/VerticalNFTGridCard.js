@@ -5,6 +5,9 @@ import { Icon } from "@iconify/react";
 import { getStrapiMedia } from "lib/media";
 
 const VerticalNFTGridCard = ({ nft }) => {
+    const options = { year: "numeric", month: "short", day: "numeric" };
+
+
   return (
     <div className="flex ">
       <div className="media mb-4">
@@ -20,9 +23,16 @@ const VerticalNFTGridCard = ({ nft }) => {
         </figure>
         <div className="pl-2 w-full">
           <div className="flex items-center py-1 text-sm">
-            <Icon height={16} icon="ep:calendar" className="text-gray-400 " />{" "}
-            <span className="pl-1 text-gray-400 text-sm">Pre-sale: </span>
-            <span className="text-blue-600 "> {nft.presale_date}</span>
+            <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
+            <span className="pl-1 text-gray-400 whitespace-nowrap">
+              Pre-sale:{" "}
+            </span>
+            <span className="text-blue-600 ">
+              {new Date(nft.presale_date).toLocaleDateString(
+                "en-US",
+                options
+              )}{" "}
+            </span>
             {/* <div className="ml-auto">
                 {nft.event_category}
               </div> */}
@@ -30,7 +40,7 @@ const VerticalNFTGridCard = ({ nft }) => {
           <h3 className="text-xl truncate">{nft.title}</h3>
           <div className="grid lg:grid-cols-2 gap-x-8 py-2">
             <div className="border-r border-gray-300">
-              <span className="text-gray-400 text-sm">Supply </span>
+              <span className="text-gray-400 whitespace-nowrap text-sm">Supply </span>
               <div className="font-medium text-lg">{nft.maximum_supply}</div>
             </div>
             <div className="">

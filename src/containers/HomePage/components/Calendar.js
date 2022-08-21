@@ -15,6 +15,7 @@ export const Calendar = () => {
   const handleToggle = () => {
     setActive(!isActive);
   };
+  const options = { year: "numeric", month: "short", day: "numeric" };
 
   useEffect(() => {
     fetchAPI("/nfts", {
@@ -63,7 +64,9 @@ export const Calendar = () => {
                           />{" "}
                           <span className="pl-1 text-slate-500">Pre-sale:</span>
                           <span className="text-blue-600 ">
-                            {nft.attributes.presale_price}
+                            {new Date(
+                              nft.attributes.presale_date
+                            ).toLocaleDateString("en-US", options)}
                           </span>
                         </div>
                       </div>
