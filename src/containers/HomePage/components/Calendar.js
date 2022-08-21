@@ -64,7 +64,7 @@ export const Calendar = () => {
                         </div>
                       </div>
                       <div
-                        className="mb-0 truncate-overflow"
+                        className="mb-0 truncate-overflow "
                         dangerouslySetInnerHTML={{
                           __html: nft.attributes.description,
                         }}
@@ -72,23 +72,23 @@ export const Calendar = () => {
                       <div className="grid lg:grid-cols-4 grid-cols-2 gap-x-8 py-2">
                         <div className="border-r border-gray-300 mb-2 md:mb-0">
                           <span className="text-slate-500">Blockchain </span>
-                          <div className="font-semibold text-lg">Ethereum</div>
+                          <div className="font-medium text-lg">Ethereum</div>
                         </div>
                         <div className="md:border-r border-gray-300 mb-2  md:mb-0">
                           <span className="text-slate-500">Mint Price </span>
-                          <div className="font-semibold text-lg">
+                          <div className="font-medium text-lg">
                             {nft.attributes.public_mint_price}
                           </div>
                         </div>
                         <div className="border-r border-gray-300 mb-2  md:mb-0">
                           <span className="text-slate-500">Supply </span>
-                          <div className="font-semibold text-lg">
+                          <div className="font-medium text-lg">
                             {nft.attributes.maximum_supply}
                           </div>
                         </div>
                         <div className=" mb-2 md:mb-0">
                           <span className="text-slate-500">Public sale </span>
-                          <div className="font-semibold text-lg">
+                          <div className="font-medium text-lg">
                             {nft.attributes.public_mint_price}
                           </div>
                         </div>

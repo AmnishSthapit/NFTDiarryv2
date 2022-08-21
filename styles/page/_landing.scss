@@ -168,6 +168,7 @@
 
 
 .truncate-overflow p{
+  @apply text-sm text-slate-500;
   width:100%;
   overflow: hidden;
   display: -webkit-box;

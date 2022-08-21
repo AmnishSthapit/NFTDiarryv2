@@ -6,19 +6,19 @@ import { getStrapiMedia } from "lib/media";
 
 const VerticalNFTGridCard = ({ nft }) => {
   return (
-    <div className="flex">
-      <div className="media">
+    <div className="flex ">
+      <div className="media mb-4">
         <figure className="figure relative flex flex-col justify-center bg-black">
           {nft.display_image && (
             <img
               src={getStrapiMedia(nft.display_image)}
-              className="figure-img img-fluid rounded"
+              className="figure-img img-fluid rounded "
               alt=""
             />
           )}
           <figcaption className="badge badge-success ">Live</figcaption>
         </figure>
-        <div className="pl-2">
+        <div className="pl-2 w-full">
           <div className="flex items-center py-1 text-sm">
             <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
             <span className="pl-1 text-gray-400">Pre-sale: </span>
@@ -28,29 +28,29 @@ const VerticalNFTGridCard = ({ nft }) => {
               </div> */}
           </div>
           <h3 className="text-xl truncate">{nft.title}</h3>
-          <div className="grid grid-cols-2 gap-x-8 py-3">
+          <div className="grid lg:grid-cols-2 gap-x-8 py-2">
             <div className="border-r border-gray-300">
               <span className="text-gray-400">Pre-sale </span>
-              <div className="font-bold text-xl">{nft.presale_price}</div>
+              <div className="font-medium text-lg">{nft.presale_price}</div>
             </div>
             <div className="">
               <span className="text-gray-400">Public sale </span>
-              <div className="font-bold text-xl">{nft.public_mint_price}</div>
+              <div className="font-medium text-lg">{nft.public_mint_price}</div>
             </div>
           </div>
           <div className="flex items-center pt-2">
             <div className="flex items-center">
-              <div className="icon w-5 h-5 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
-                <Icon height={16} icon="bxl:twitter" className="text-white" />
+              <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
+                <Icon height={22} icon="bxl:twitter" className="text-white" />
               </div>
               <span className="pl-1 font-bold text-sm">
                 {nft.twitter_followers}
               </span>
             </div>
             <div className="flex items-center pl-3">
-              <div className="icon w-5 h-5 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
+              <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
                 <Icon
-                  height={16}
+                  height={22}
                   icon="bxl:discord-alt"
                   className="text-white"
                 />
@@ -61,7 +61,7 @@ const VerticalNFTGridCard = ({ nft }) => {
             </div>
             <div className="ml-auto">
               <Link href={"/detail/" + nft.slug}>
-                <a className="btn btn-link">View Detail</a>
+                <a className="btn btn-primary btn-sm">View Detail</a>
               </Link>
             </div>
           </div>
@@ -70,6 +70,5 @@ const VerticalNFTGridCard = ({ nft }) => {
     </div>
   );
 };
-
 
 export default VerticalNFTGridCard;

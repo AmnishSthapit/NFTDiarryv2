@@ -4,10 +4,9 @@ import Link from "next/link";
 import StickyBox from "react-sticky-box";
 import { About } from "../HomePage/components/About";
 import { getStrapiMedia } from "lib/media";
-import parse from 'html-react-parser'
+import parse from "html-react-parser";
 
-const DetailPage = ({nftData}) => {
-
+const DetailPage = ({ nftData }) => {
   const nftDetail = nftData[0];
   return (
     <>
@@ -49,11 +48,15 @@ const DetailPage = ({nftData}) => {
                     className="text-gray-400"
                   />{" "}
                   <span className="pl-1 text-gray-400">Pre-sale:</span>
-                  <span className="text-gray-600 "> {nftDetail.attributes.presale_date}</span>
+                  <span className="text-gray-600 ">
+                    {" "}
+                    {nftDetail.attributes.presale_date}
+                  </span>
                 </div>
                 <h2 className="border-0 p-0 mb-0">
                   {" "}
-                  Minting is {nftDetail.attributes.minting_status} <span className="blink-me"></span>{" "}
+                  Minting is {nftDetail.attributes.minting_status}{" "}
+                  <span className="blink-me"></span>{" "}
                 </h2>
                 <div className="flex items-center pt-3 ">
                   <div className="flex items-center ">
@@ -64,7 +67,9 @@ const DetailPage = ({nftData}) => {
                         className="text-white"
                       />
                     </div>
-                    <span className="pl-1 font-bold text-sm">{nftDetail.attributes.twitter_followers}</span>
+                    <span className="pl-1 font-bold text-sm">
+                      {nftDetail.attributes.twitter_followers}
+                    </span>
                   </div>
                   <div className="flex  items-center  pl-3">
                     <div className="icon w-8 h-8 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
@@ -74,10 +79,15 @@ const DetailPage = ({nftData}) => {
                         className="text-white"
                       />
                     </div>
-                    <span className="pl-1 font-bold text-sm">{nftDetail.attributes.discord_members}</span>
+                    <span className="pl-1 font-bold text-sm">
+                      {nftDetail.attributes.discord_members}
+                    </span>
                   </div>
                   <div className="ml-auto">
-                    <a className="btn btn-secondary btn-sm" href={nftDetail.attributes.website_link}>
+                    <a
+                      className="btn btn-secondary btn-sm"
+                      href={nftDetail.attributes.website_link}
+                    >
                       Visit Website
                     </a>
                   </div>
@@ -86,26 +96,36 @@ const DetailPage = ({nftData}) => {
               <div className="box box-filled mt-6">
                 <h3>Project Details:</h3>
                 <div className=" mb-10 md:mb-0">
-                  <div className="grid grid-cols-2 gap-x-8 py-3 ">
+                  <div className="grid lg:grid-cols-2 gap-x-8 py-3 ">
                     <div className="mb-6">
                       <span className="text-gray-400">Pre-sale </span>
-                      <div className="font-bold text-xl">{nftDetail.attributes.presale}</div>
+                      <div className="font-medium text-lg">
+                        {nftDetail.attributes.presale}
+                      </div>
                     </div>
                     <div className="mb-6">
                       <span className="text-gray-400">Maximum Supply:</span>
-                      <div className="font-bold text-xl">{nftDetail.attributes.maximum_supply}</div>
+                      <div className="font-medium text-lg">
+                        {nftDetail.attributes.maximum_supply}
+                      </div>
                     </div>
                     <div className="mb-6">
                       <span className="text-gray-400">Pre-sale Price:</span>
-                      <div className="font-bold text-xl">{nftDetail.attributes.presale_price}</div>
+                      <div className="font-medium text-lg">
+                        {nftDetail.attributes.presale_price}
+                      </div>
                     </div>
                     <div className="mb-6">
                       <span className="text-gray-400">Public Mint Price: </span>
-                      <div className="font-bold text-xl">{nftDetail.attributes.public_mint_price}</div>
+                      <div className="font-medium text-lg">
+                        {nftDetail.attributes.public_mint_price}
+                      </div>
                     </div>
                     <div className="mb-6">
                       <span className="text-gray-400">Event Category:</span>
-                      <div className="font-bold text-xl">{nftDetail.attributes.event_category}</div>
+                      <div className="font-medium text-lg">
+                        {nftDetail.attributes.event_category}
+                      </div>
                     </div>
                   </div>
                 </div>

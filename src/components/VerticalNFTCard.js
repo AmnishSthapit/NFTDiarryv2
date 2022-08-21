@@ -27,14 +27,14 @@ const VerticalNFTCard = ({ nft, bg }) => {
         </div>
       </div>
       <h3>{nft?.title}</h3>
-      <div className="grid grid-cols-2 gap-x-8 py-3">
+      <div className="grid lg:grid-cols-2 gap-x-8 py-3">
         <div className="border-r border-gray-300">
           <span className="text-gray-400">Pre-sale </span>
-          <div className="font-bold text-xl">{nft?.presale_price}</div>
+          <div className="font-medium text-lg">{nft?.presale_price}</div>
         </div>
         <div className="">
           <span className="text-gray-400">Public sale </span>
-          <div className="font-bold text-xl">{nft?.public_mint_price}</div>
+          <div className="font-medium text-lg">{nft?.public_mint_price}</div>
         </div>
       </div>
       <div className="flex items-center pt-3">

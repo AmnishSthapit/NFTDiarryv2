@@ -8,7 +8,7 @@ export const CTACard = () => {
       <div className="container mx-auto ">
         <div className="flex justify-center ">
           <div className="mb-8 bg-gray-900 rounded-lg  w-3/4 px-10 py-20 text-center">
-            <div className="text-white font-bold text-xl mb-2 ">
+            <div className="text-white font-medium text-lg mb-2 ">
               GOT AN IDEA?
             </div>
             <p className="text-gray-700 text-base">

@@ -40,7 +40,7 @@
 }
 
 .media{
-    @apply flex flex-col bg-white rounded-lg p-4;
+    @apply flex flex-col bg-white rounded-lg p-4 w-full;
     .figure{
         @apply w-full h-56 overflow-hidden rounded-lg relative;
     }
@@ -48,6 +48,7 @@
         @apply flex-row;
         .figure{
             @apply w-40 h-48;
+            min-width: 160px;
             &-sm{
                 @apply w-64 h-48; 
             }

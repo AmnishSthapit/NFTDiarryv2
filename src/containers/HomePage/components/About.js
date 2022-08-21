@@ -45,14 +45,11 @@ export const About = () => {
         />
         <div className="container mx-auto">
           <div className="about">
-            <h2 className="">Sponsored</h2>
+            <h2 className="">Trending</h2>
             {data.data?.length > 0 && (
-              <div className="flex lg:flex-row flex-col justify-center items-center ">
-                  <VerticalNFTCard
-                    nft={data?.data[0]?.attributes}
-                    bg="white"
-                  />
-                <div className="grid grid-cols-2 gap-4 mt-2 lg:ml-2">
+              <div className="flex lg:flex-row flex-col lg:justify-start justify-center items-center ">
+                <VerticalNFTCard nft={data?.data[0]?.attributes} bg="white" />
+                <div className="grid lg:grid-cols-2 gap-4 mt-2 lg:ml-2 w-full">
                   {data?.data?.slice(1, 5).map((grid, i) => (
                     <div key={i}>
                       <VerticalNFTGridCard nft={grid.attributes} />
