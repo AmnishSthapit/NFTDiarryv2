@@ -6,11 +6,12 @@ import { Icon } from "@iconify/react";
 import parse from "html-react-parser";
 
 const Footer = ({ footerData }) => {
-  const { logo, description, discord, facebook, telegram, twitter, instagram } =
-    footerData.attributes;
+  console.log(footerData)
+  // const { logo, description, discord, facebook, telegram, twitter, instagram } =
+  //   footerData.attributes;
   return (
     <footer className=" pt-20 pb-10 bg-slate-100">
-      <div className="container mx-auto">
+      {/* <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="">
             <img className="h-24" src={images.logo.src} alt="" />
@@ -85,7 +86,7 @@ const Footer = ({ footerData }) => {
         <div className="text-center   text-gray-400 py-5">
           &copy; 2022 NFT Dairy - All rights reserved.
         </div>
-      </div>
+      </div> */}
     </footer>
     // <footer className=" pt-32 pb-10 bg-slate-40">
     //   <div className="container mx-auto">
