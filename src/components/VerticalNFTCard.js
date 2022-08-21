@@ -5,6 +5,8 @@ import { Icon } from "@iconify/react";
 import { getStrapiMedia } from "lib/media";
 
 const VerticalNFTCard = ({ nft, bg }) => {
+    const options = { year: "numeric", month: "short", day: "numeric" };
+
   return (
     <div className={`card mb-10 md:mb-0 ${bg}`}>
       <figure className="figure relative">
@@ -19,8 +21,16 @@ const VerticalNFTCard = ({ nft, bg }) => {
       </figure>
       <div className="flex items-center py-2 text-sm">
         <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
-        <span className="pl-1 text-gray-400 text-sm">Pre-sale: </span>
-        <span className="text-blue-600 "> {nft?.presale_date}</span>
+        <span className="pl-1 text-gray-400 text-sm whitespace-nowrap">
+          Pre-sale:{" "}
+        </span>
+        <span className="text-blue-600 ">
+          {" "}
+          {new Date(nft.presale_date).toLocaleDateString(
+            "en-US",
+            options
+          )}
+        </span>
         <div className="ml-auto">
           {/* <img src="" alt="" /> */}
           {nft?.event_category}
