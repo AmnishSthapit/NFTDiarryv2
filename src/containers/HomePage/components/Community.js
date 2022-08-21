@@ -41,7 +41,7 @@ export const Community = () => {
                   color="#229ED9"
                   className=" transition-all pr-4"
                 />
-                Join us on Twitter
+                Join us on Telegram
               </button>
             </div>
           </div>
