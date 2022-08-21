@@ -39,26 +39,30 @@ const VerticalNFTGridCard = ({ nft }) => {
             </div>
           </div>
           <div className="flex items-center pt-2">
-            <div className="flex items-center">
-              <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
-                <Icon height={22} icon="bxl:twitter" className="text-white" />
-              </div>
-              <span className="pl-1 font-bold text-sm">
+            <a>
+              <div className="flex items-center">
+                <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
+                  <Icon height={22} icon="bxl:twitter" className="text-white" />
+                </div>
+                {/* <span className="pl-1 font-bold text-sm">
                 {nft.twitter_followers}
-              </span>
-            </div>
-            <div className="flex items-center pl-3">
-              <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
-                <Icon
-                  height={22}
-                  icon="bxl:discord-alt"
-                  className="text-white"
-                />
+              </span> */}
               </div>
-              <span className="pl-1 font-bold text-sm">
+            </a>
+            <a>
+              <div className="flex items-center pl-3">
+                <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
+                  <Icon
+                    height={22}
+                    icon="bxl:discord-alt"
+                    className="text-white"
+                  />
+                </div>
+                {/* <span className="pl-1 font-bold text-sm">
                 {nft.discord_members}
-              </span>
-            </div>
+              </span> */}
+              </div>
+            </a>
             <div className="ml-auto">
               <Link href={"/detail/" + nft.slug}>
                 <a className="btn btn-primary btn-sm">View Detail</a>

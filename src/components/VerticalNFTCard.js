@@ -38,20 +38,26 @@ const VerticalNFTCard = ({ nft, bg }) => {
         </div>
       </div>
       <div className="flex items-center pt-3">
-        <div className="flex items-center">
-          <div className="icon w-5 h-5 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
-            <Icon height={16} icon="bxl:twitter" className="text-white" />
+        <a href="">
+          <div className="flex items-center">
+            <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
+              <Icon height={22} icon="bxl:twitter" className="text-white" />
+            </div>
+            <span className="pl-1 font-bold text-sm">
+              {nft?.twitter_followers}
+            </span>
           </div>
-          <span className="pl-1 font-bold text-sm">
-            {nft?.twitter_followers}
-          </span>
-        </div>
-        <div className="flex items-center pl-3">
-          <div className="icon w-5 h-5 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
-            <Icon height={16} icon="bxl:discord-alt" className="text-white" />
+        </a>
+        <a href="">
+          <div className="flex items-center pl-3">
+            <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
+              <Icon height={22} icon="bxl:discord-alt" className="text-white" />
+            </div>
+            <span className="pl-1 font-bold text-sm">
+              {nft?.discord_members}
+            </span>
           </div>
-          <span className="pl-1 font-bold text-sm">{nft?.discord_members}</span>
-        </div>
+        </a>
         <div className="ml-auto">
           <Link href={"/detail/" + nft?.slug}>
             <a className="btn btn-primary btn-sm">View Detail</a>
