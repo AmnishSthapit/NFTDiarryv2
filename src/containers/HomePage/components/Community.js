@@ -6,7 +6,7 @@ import { images } from "@/assets";
 export const Community = () => {
   return (
     <>
-      <section className="py-0 ">
+      <section className="py-0 mb-10">
         <div className="container mx-auto">
           <div className="rounded-lg bg-slate-900 py-20 px-6 text-center">
             <h3 className="text-white text-3xl">JOIN OUR COMMUNITY</h3>
