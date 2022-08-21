@@ -30,8 +30,8 @@ const VerticalNFTGridCard = ({ nft }) => {
           <h3 className="text-xl truncate">{nft.title}</h3>
           <div className="grid lg:grid-cols-2 gap-x-8 py-2">
             <div className="border-r border-gray-300">
-              <span className="text-gray-400 text-sm">Pre-sale </span>
-              <div className="font-medium text-lg">{nft.presale_price}</div>
+              <span className="text-gray-400 text-sm">Supply </span>
+              <div className="font-medium text-lg">{nft.maximum_supply}</div>
             </div>
             <div className="">
               <span className="text-gray-400 text-sm">Public sale </span>
