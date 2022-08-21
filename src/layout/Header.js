@@ -36,7 +36,7 @@ export const Header = () => {
               <div className="">
                 <Link href="/">
                   <a>
-                    <img className="h-24" src={images.logo.src} alt="" />
+                    <img className="h-16" src={images.logo.src} alt="" />
                   </a>
                 </Link>
               </div>
@@ -166,13 +166,6 @@ export const Header = () => {
                   <a href="#" target="_blank" rel="noreferrer">
                     <Icon
                       icon="ic:baseline-telegram"
-                      height={50}
-                      className="text-white hover:text-white transition-all pr-4"
-                    />
-                  </a>
-                  <a href="#" target="_blank" rel="noreferrer">
-                    <Icon
-                      icon="ic:outline-discord"
                       height={50}
                       className="text-white hover:text-white transition-all pr-4"
                     />

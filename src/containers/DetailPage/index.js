@@ -7,9 +7,7 @@ import { getStrapiMedia } from "lib/media";
 import parse from "html-react-parser";
 
 const DetailPage = ({ nftData }) => {
-  // const nftDetail = nftData[0];
 
-  console.log(nftData);
   return (
     <>
       <section>
@@ -98,7 +96,7 @@ const DetailPage = ({ nftData }) => {
               <div className="box box-filled mt-6">
                 <h3>Project Details:</h3>
                 <div className=" mb-10 md:mb-0">
-                  <div className="grid grid-cols-2 gap-x-8 py-3 ">
+                  <div className="grid lg:grid-cols-2 gap-x-8 py-3 ">
                     <div className="mb-6">
                       <span className="text-gray-400">Pre-sale </span>
                       <div className="font-bold text-xl">
