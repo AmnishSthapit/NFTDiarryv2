@@ -11,6 +11,10 @@ import { fetchAPI } from "lib/api";
 
 export const Calendar = () => {
   const [all, setAll] = useState({});
+  const [isActive, setActive] = useState("false");
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
 
   useEffect(() => {
     fetchAPI("/nfts", {
@@ -122,14 +126,23 @@ export const Calendar = () => {
                           </a>
                         </div>
                         <div className="md:ml-auto ml-0 flex ">
-                          <div className="flex items-center border border-rose-400 bg-white px-3 py-2 mr-3 cursor-pointer rounded-sm  w-1/2 md:w-auto mb-2 md:mb-0">
+                          <button
+                            onClick={handleToggle}
+                            className={`btn-vote ${isActive ? "active" : null}`}
+                          >
                             <Icon
-                              className="text-rose-400"
+                              className={
+                                isActive ? "text-white" : "text-rose-400"
+                              }
                               height={22}
-                              icon="ant-design:heart-outlined"
+                              icon={
+                                isActive
+                                  ? "ant-design:heart-filled"
+                                  : "ant-design:heart-outlined"
+                              }
                             />
                             <div className="text-rose-400 pl-1">Vote</div>
-                          </div>
+                          </button>
                           <div className="w-1/2 md:w-auto">
                             <Link href={"/detail/" + nft.attributes.slug}>
                               <a className="btn btn-primary btn-sm ">

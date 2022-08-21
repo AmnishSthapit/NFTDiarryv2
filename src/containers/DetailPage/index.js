@@ -47,7 +47,7 @@ const DetailPage = ({ nftData }) => {
                     icon="ep:calendar"
                     className="text-gray-400"
                   />{" "}
-                  <span className="pl-1 text-gray-400">Pre-sale:</span>
+                  <span className="pl-1 text-gray-400 text-sm">Pre-sale:</span>
                   <span className="text-gray-600 ">
                     {" "}
                     {nftDetail.attributes.presale_date}
@@ -98,31 +98,39 @@ const DetailPage = ({ nftData }) => {
                 <div className=" mb-10 md:mb-0">
                   <div className="grid lg:grid-cols-2 gap-x-8 py-3 ">
                     <div className="mb-6">
-                      <span className="text-gray-400">Pre-sale </span>
+                      <span className="text-gray-400 text-sm">Pre-sale </span>
                       <div className="font-medium text-lg">
                         {nftDetail.attributes.presale}
                       </div>
                     </div>
                     <div className="mb-6">
-                      <span className="text-gray-400">Maximum Supply:</span>
+                      <span className="text-gray-400 text-sm">
+                        Maximum Supply:
+                      </span>
                       <div className="font-medium text-lg">
                         {nftDetail.attributes.maximum_supply}
                       </div>
                     </div>
                     <div className="mb-6">
-                      <span className="text-gray-400">Pre-sale Price:</span>
+                      <span className="text-gray-400 text-sm">
+                        Pre-sale Price:
+                      </span>
                       <div className="font-medium text-lg">
                         {nftDetail.attributes.presale_price}
                       </div>
                     </div>
                     <div className="mb-6">
-                      <span className="text-gray-400">Public Mint Price: </span>
+                      <span className="text-gray-400 text-sm">
+                        Public Mint Price:{" "}
+                      </span>
                       <div className="font-medium text-lg">
                         {nftDetail.attributes.public_mint_price}
                       </div>
                     </div>
                     <div className="mb-6">
-                      <span className="text-gray-400">Event Category:</span>
+                      <span className="text-gray-400 text-sm">
+                        Event Category:
+                      </span>
                       <div className="font-medium text-lg">
                         {nftDetail.attributes.event_category}
                       </div>

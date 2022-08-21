@@ -1,12 +1,13 @@
 .card {
-    @apply mx-2 bg-white rounded-lg p-4 ;
+    @apply mx-2 bg-white rounded-lg p-4;
     min-width: 320px;
 
     @media screen and (min-width:992px) {
         @apply mx-1;
         max-width: 320px;
-        &-lg{
-        max-width: 390px;
+
+        &-lg {
+            max-width: 390px;
         }
     }
 
@@ -28,41 +29,62 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
     }
-    &-icon{
+
+    &-icon {
         @apply mb-7 w-16 h-16 rounded-md bg-blue-800 items-center flex flex-col justify-center
     }
-    .figure{
+
+    .figure {
         @apply max-h-52 overflow-hidden rounded-lg;
     }
 }
-.quote-icon{
+
+.quote-icon {
     @apply bg-blue-800 text-white rounded-full
 }
 
-.media{
+.media {
     @apply flex flex-col bg-white rounded-lg p-4 w-full;
-    .figure{
+
+    .figure {
         @apply w-full h-56 overflow-hidden rounded-lg relative;
     }
-    @screen xl{
+
+    @screen xl {
         @apply flex-row;
-        .figure{
-            @apply w-40 h-48;
+
+        .figure {
+            @apply w-40 h-44;
             min-width: 160px;
-            &-sm{
-                @apply w-64 h-48; 
+
+            &-sm {
+                @apply w-64 h-48;
             }
-            &-lg{
-                @apply w-72 h-56; 
+
+            &-lg {
+                @apply w-72 h-56;
 
             }
         }
     }
 }
 
-.box{
+.box {
     @apply mx-2 bg-white rounded-lg p-4 border border-slate-200;
-    &-filled{
-        @apply bg-slate-50;
+
+    &-filled {
+        @apply bg-slate-50 ;
+    }
+}
+
+.card,
+.media {
+    &:hover {
+        figure {
+            img {
+                transform: scale(1.05);
+                @apply ease-in-out duration-100;
+            }
+        }
     }
 }

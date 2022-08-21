@@ -1,12 +1,12 @@
 .btn {
-    @apply rounded-lg w-full px-12 py-6 h-16 ;
+    @apply rounded-lg w-full px-12 py-6 h-16;
 
     &-primary {
-        @apply text-white font-normal ;
+        @apply text-white font-normal;
     }
 
     &-secondary {
-        @apply text-white font-normal ;
+        @apply text-white font-normal;
     }
 
     &-link {
@@ -15,7 +15,7 @@
     }
 
     &-outline {
-        @apply border-white text-white hover:text-blue-900 hover:bg-white px-6 font-normal ;
+        @apply border-white text-white hover:text-blue-900 hover:bg-white px-6 font-normal;
 
         &:hover {
             svg {
@@ -25,12 +25,27 @@
             }
         }
     }
-&-sm{
-    @apply px-3 py-3 h-10 rounded-sm;
 
-}
+    &-sm {
+        @apply px-3 py-3 h-10 rounded-sm;
+
+    }
+
     @screen md {
         @apply w-auto;
+    }
+
+    &-vote {
+        @apply flex items-center border border-rose-400 bg-white px-3 py-2 mr-3 cursor-pointer rounded-sm w-1/2 md:w-auto mb-2 md:mb-0;
+
+        &.active {
+            @apply bg-red-400 text-white;
+  
+            div {
+                @apply text-white;
+
+            }
+        }
     }
 }
 

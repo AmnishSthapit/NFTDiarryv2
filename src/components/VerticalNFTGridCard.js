@@ -20,8 +20,8 @@ const VerticalNFTGridCard = ({ nft }) => {
         </figure>
         <div className="pl-2 w-full">
           <div className="flex items-center py-1 text-sm">
-            <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
-            <span className="pl-1 text-gray-400">Pre-sale: </span>
+            <Icon height={16} icon="ep:calendar" className="text-gray-400 " />{" "}
+            <span className="pl-1 text-gray-400 text-sm">Pre-sale: </span>
             <span className="text-blue-600 "> {nft.presale_date}</span>
             {/* <div className="ml-auto">
                 {nft.event_category}
@@ -30,11 +30,11 @@ const VerticalNFTGridCard = ({ nft }) => {
           <h3 className="text-xl truncate">{nft.title}</h3>
           <div className="grid lg:grid-cols-2 gap-x-8 py-2">
             <div className="border-r border-gray-300">
-              <span className="text-gray-400">Pre-sale </span>
+              <span className="text-gray-400 text-sm">Pre-sale </span>
               <div className="font-medium text-lg">{nft.presale_price}</div>
             </div>
             <div className="">
-              <span className="text-gray-400">Public sale </span>
+              <span className="text-gray-400 text-sm">Public sale </span>
               <div className="font-medium text-lg">{nft.public_mint_price}</div>
             </div>
           </div>

@@ -19,7 +19,7 @@ const VerticalNFTCard = ({ nft, bg }) => {
       </figure>
       <div className="flex items-center py-2 text-sm">
         <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
-        <span className="pl-1 text-gray-400">Pre-sale: </span>
+        <span className="pl-1 text-gray-400 text-sm">Pre-sale: </span>
         <span className="text-blue-600 "> {nft?.presale_date}</span>
         <div className="ml-auto">
           {/* <img src="" alt="" /> */}
@@ -29,11 +29,11 @@ const VerticalNFTCard = ({ nft, bg }) => {
       <h3>{nft?.title}</h3>
       <div className="grid lg:grid-cols-2 gap-x-8 py-3">
         <div className="border-r border-gray-300">
-          <span className="text-gray-400">Pre-sale </span>
+          <span className="text-gray-400 text-sm">Pre-sale </span>
           <div className="font-medium text-lg">{nft?.presale_price}</div>
         </div>
         <div className="">
-          <span className="text-gray-400">Public sale </span>
+          <span className="text-gray-400 text-sm">Public sale </span>
           <div className="font-medium text-lg">{nft?.public_mint_price}</div>
         </div>
       </div>
