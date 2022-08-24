@@ -22,7 +22,7 @@ const VerticalNFTGridCard = ({ nft }) => {
             {nft?.minting_status
               .split(" ")
               .map((word) => word[0].toUpperCase().concat(word.slice(1)))
-              .join("")}
+              .join(" ")}
           </figcaption>
         </figure>
         <div className="pl-2 w-full">

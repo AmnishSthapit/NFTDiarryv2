@@ -60,7 +60,7 @@ const DetailPage = ({ nftData }) => {
                   {nftData?.minting_status
                     .split(" ")
                     .map((word) => word[0].toUpperCase().concat(word.slice(1)))
-                    .join("")}{" "}
+                    .join(" ")}
                   <span className="blink-me"></span>{" "}
                 </h2>
                 <div className="flex items-center pt-3 ">

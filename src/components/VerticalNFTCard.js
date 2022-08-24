@@ -21,7 +21,7 @@ const VerticalNFTCard = ({ nft, bg }) => {
           {nft?.minting_status
             .split(" ")
             .map((word) => word[0].toUpperCase().concat(word.slice(1)))
-            .join("")}
+            .join(" ")}
         </figcaption>
       </figure>
       <div className="flex items-center py-2 text-sm">

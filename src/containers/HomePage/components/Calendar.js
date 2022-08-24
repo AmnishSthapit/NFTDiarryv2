@@ -53,7 +53,7 @@ export const Calendar = () => {
                           .map((word) =>
                             word[0].toUpperCase().concat(word.slice(1))
                           )
-                          .join("")}
+                          .join(" ")}
                       </figcaption>
                     </figure>
                     <div className="pl-3 w-full">
