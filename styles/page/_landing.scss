@@ -167,7 +167,7 @@
 }
 
 
-.truncate-overflow p{
+.truncate-overflow p {
   @apply text-sm text-slate-500;
   width:100%;
   overflow: hidden;
@@ -177,3 +177,6 @@
   margin-bottom: 10px;
 }
 
+.truncate-overflow p:not(:first-child) {
+  display: none;
+}

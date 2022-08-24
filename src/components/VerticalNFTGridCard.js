@@ -5,8 +5,7 @@ import { Icon } from "@iconify/react";
 import { getStrapiMedia } from "lib/media";
 
 const VerticalNFTGridCard = ({ nft }) => {
-    const options = { year: "numeric", month: "short", day: "numeric" };
-
+  const options = { year: "numeric", month: "short", day: "numeric" };
 
   return (
     <div className="flex ">
@@ -19,19 +18,21 @@ const VerticalNFTGridCard = ({ nft }) => {
               alt=""
             />
           )}
-          <figcaption className="badge badge-success ">Live</figcaption>
+          <figcaption className="badge badge-success ">
+            {nft?.minting_status
+              .split(" ")
+              .map((word) => word[0].toUpperCase().concat(word.slice(1)))
+              .join(" ")}
+          </figcaption>
         </figure>
         <div className="pl-2 w-full">
           <div className="flex items-center py-1 text-sm">
             <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
-            <span className="pl-1 text-gray-400 whitespace-nowrap">
+            <span className="pl-1 pr-0.5 text-gray-400 whitespace-nowrap">
               Pre-sale:{" "}
             </span>
             <span className="text-blue-600 ">
-              {new Date(nft.presale_date).toLocaleDateString(
-                "en-US",
-                options
-              )}{" "}
+              {new Date(nft.presale_date).toLocaleDateString("en-US", options)}{" "}
             </span>
             {/* <div className="ml-auto">
                 {nft.event_category}
@@ -40,7 +41,9 @@ const VerticalNFTGridCard = ({ nft }) => {
           <h3 className="text-xl truncate">{nft.title}</h3>
           <div className="grid lg:grid-cols-2 gap-x-8 py-2">
             <div className="border-r border-gray-300">
-              <span className="text-gray-400 whitespace-nowrap text-sm">Supply </span>
+              <span className="text-gray-400 whitespace-nowrap text-sm">
+                Supply{" "}
+              </span>
               <div className="font-medium text-lg">{nft.maximum_supply}</div>
             </div>
             <div className="">
@@ -49,9 +52,9 @@ const VerticalNFTGridCard = ({ nft }) => {
             </div>
           </div>
           <div className="flex items-center pt-2">
-            <a>
+            <a href={nft?.twitter} target="_blank">
               <div className="flex items-center">
-                <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
+                <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center cursor-pointer">
                   <Icon height={22} icon="bxl:twitter" className="text-white" />
                 </div>
                 {/* <span className="pl-1 font-bold text-sm">
@@ -59,9 +62,9 @@ const VerticalNFTGridCard = ({ nft }) => {
               </span> */}
               </div>
             </a>
-            <a>
+            <a href={nft?.discord} target="_blank">
               <div className="flex items-center pl-3">
-                <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
+                <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center cursor-pointer">
                   <Icon
                     height={22}
                     icon="bxl:discord-alt"

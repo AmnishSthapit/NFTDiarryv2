@@ -14,7 +14,7 @@ const HomePage = ({ homepageData }) => {
       <KeyFeatures />
       <Calendar />
       <Partner />
-      <Community />
+      <Community socialLinks={homepageData} />
     </div>
   );
 };

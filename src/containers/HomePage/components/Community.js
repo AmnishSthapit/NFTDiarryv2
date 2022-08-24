@@ -3,7 +3,9 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { images } from "@/assets";
 
-export const Community = () => {
+export const Community = ({socialLinks}) => {
+
+  console.log(socialLinks)
   return (
     <>
       <section className="py-0 mb-10">

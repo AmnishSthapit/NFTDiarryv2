@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 import { getStrapiMedia } from "lib/media";
 
 const VerticalNFTCard = ({ nft, bg }) => {
-    const options = { year: "numeric", month: "short", day: "numeric" };
+  const options = { year: "numeric", month: "short", day: "numeric" };
 
   return (
     <div className={`card mb-10 md:mb-0 ${bg}`}>
@@ -17,19 +17,21 @@ const VerticalNFTCard = ({ nft, bg }) => {
             alt=""
           />
         )}
-        <figcaption className="badge badge-success ">Live</figcaption>
+        <figcaption className="badge badge-success ">
+          {nft?.minting_status
+            .split(" ")
+            .map((word) => word[0].toUpperCase().concat(word.slice(1)))
+            .join(" ")}
+        </figcaption>
       </figure>
       <div className="flex items-center py-2 text-sm">
         <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
-        <span className="pl-1 text-gray-400 text-sm whitespace-nowrap">
+        <span className="pl-1 pr-0.5 text-gray-400 text-sm whitespace-nowrap">
           Pre-sale:{" "}
         </span>
         <span className="text-blue-600 ">
           {" "}
-          {new Date(nft.presale_date).toLocaleDateString(
-            "en-US",
-            options
-          )}
+          {new Date(nft.presale_date).toLocaleDateString("en-US", options)}
         </span>
         <div className="ml-auto">
           {/* <img src="" alt="" /> */}
@@ -48,9 +50,9 @@ const VerticalNFTCard = ({ nft, bg }) => {
         </div>
       </div>
       <div className="flex items-center pt-3">
-        <a href="">
+        <a href={nft?.twitter} target="_blank">
           <div className="flex items-center">
-            <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
+            <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center cursor-pointer">
               <Icon height={22} icon="bxl:twitter" className="text-white" />
             </div>
             <span className="pl-1 font-bold text-sm">
@@ -58,9 +60,9 @@ const VerticalNFTCard = ({ nft, bg }) => {
             </span>
           </div>
         </a>
-        <a href="">
+        <a href={nft?.discord} target="_blank">
           <div className="flex items-center pl-3">
-            <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
+            <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center cursor-pointer">
               <Icon height={22} icon="bxl:discord-alt" className="text-white" />
             </div>
             <span className="pl-1 font-bold text-sm">
