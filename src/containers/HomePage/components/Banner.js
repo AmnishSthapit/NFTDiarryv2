@@ -32,9 +32,11 @@ export const Banner = ({ homepageData }) => {
             </span>
             <h1 className="my-9">{banner_title}</h1>
             <div className="flex md:flex-row flex-col justify-start">
-              <a className="btn btn-primary md:mr-10 mb-10 mdLmb-0">
-                {banner_button_text}
-              </a>
+              <Link href="/upcoming">
+                <a className="btn btn-primary md:mr-10 mb-10 mdLmb-0">
+                  {banner_button_text}
+                </a>
+              </Link>
               {/* <a className="btn btn-secondary">Learn More</a> */}
             </div>
           </div>

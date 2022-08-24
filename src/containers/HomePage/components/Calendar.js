@@ -102,7 +102,11 @@ export const Calendar = () => {
                       </div>
                       <div className="flex flex-col md:flex-row md:items-center mt-3">
                         <div className="flex items-center mb-3 md:mb-0">
-                          <a className="w-1/2 md:w-auto" href="">
+                          <a
+                            className="w-1/2 md:w-auto"
+                            href={nft?.attributes?.twitter}
+                            target="_blank"
+                          >
                             <div className="p-2 rounded-sm border border-slate-2 bg-white flex items-center hover:border-violet-400 ">
                               <div className="icon w-6 h-6 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
                                 <Icon
@@ -115,7 +119,11 @@ export const Calendar = () => {
                             </div>
                           </a>
 
-                          <a className="w-1/2 md:w-auto" href="">
+                          <a
+                            className="w-1/2 md:w-auto"
+                            href={nft?.attributes?.discord}
+                            target="_blank"
+                          >
                             <div className="p-2 ml-2 rounded-sm border border-slate-2 bg-white flex items-center hover:border-violet-400">
                               <div className="icon w-6 h-6 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
                                 <Icon

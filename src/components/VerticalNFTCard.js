@@ -26,10 +26,7 @@ const VerticalNFTCard = ({ nft, bg }) => {
         </span>
         <span className="text-blue-600 ">
           {" "}
-          {new Date(nft.presale_date).toLocaleDateString(
-            "en-US",
-            options
-          )}
+          {new Date(nft.presale_date).toLocaleDateString("en-US", options)}
         </span>
         <div className="ml-auto">
           {/* <img src="" alt="" /> */}
@@ -48,9 +45,9 @@ const VerticalNFTCard = ({ nft, bg }) => {
         </div>
       </div>
       <div className="flex items-center pt-3">
-        <a href="">
+        <a href={nft?.twitter} target="_blank">
           <div className="flex items-center">
-            <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center">
+            <div className="icon w-7 h-7 rounded-full bg-twitter-100 p-1 flex flex-col justify-center items-center cursor-pointer">
               <Icon height={22} icon="bxl:twitter" className="text-white" />
             </div>
             <span className="pl-1 font-bold text-sm">
@@ -58,9 +55,9 @@ const VerticalNFTCard = ({ nft, bg }) => {
             </span>
           </div>
         </a>
-        <a href="">
+        <a href={nft?.discord} target="_blank">
           <div className="flex items-center pl-3">
-            <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center">
+            <div className="icon w-7 h-7 rounded-full bg-discord-100 p-1 flex flex-col justify-center items-center cursor-pointer">
               <Icon height={22} icon="bxl:discord-alt" className="text-white" />
             </div>
             <span className="pl-1 font-bold text-sm">
