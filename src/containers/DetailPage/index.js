@@ -46,7 +46,7 @@ const DetailPage = ({ nftData }) => {
                     icon="ep:calendar"
                     className="text-gray-400"
                   />{" "}
-                  <span className="pl-1 text-gray-400 whitespace-nowrap">
+                  <span className="pl-1 pr-0.5 text-gray-400 whitespace-nowrap">
                     Pre-sale:
                   </span>
                   <span className="text-gray-600 ">

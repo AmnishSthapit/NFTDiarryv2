@@ -57,7 +57,7 @@ export const Calendar = () => {
                       </figcaption>
                     </figure>
                     <div className="pl-3 w-full">
-                      <div className="flex mt-3 lg:mt-0">
+                      <div className="flex mt-3 xl:mt-0">
                         <h3 className="text-xl truncate">
                           {nft.attributes.title}
                         </h3>

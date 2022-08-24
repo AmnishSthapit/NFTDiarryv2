@@ -26,7 +26,7 @@ const VerticalNFTCard = ({ nft, bg }) => {
       </figure>
       <div className="flex items-center py-2 text-sm">
         <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
-        <span className="pl-1 text-gray-400 text-sm whitespace-nowrap">
+        <span className="pl-1 pr-0.5 text-gray-400 text-sm whitespace-nowrap">
           Pre-sale:{" "}
         </span>
         <span className="text-blue-600 ">

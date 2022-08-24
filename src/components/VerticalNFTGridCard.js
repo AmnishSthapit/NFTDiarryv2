@@ -28,7 +28,7 @@ const VerticalNFTGridCard = ({ nft }) => {
         <div className="pl-2 w-full">
           <div className="flex items-center py-1 text-sm">
             <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}
-            <span className="pl-1 text-gray-400 whitespace-nowrap">
+            <span className="pl-1 pr-0.5 text-gray-400 whitespace-nowrap">
               Pre-sale:{" "}
             </span>
             <span className="text-blue-600 ">
