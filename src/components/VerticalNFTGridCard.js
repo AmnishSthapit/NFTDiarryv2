@@ -18,7 +18,12 @@ const VerticalNFTGridCard = ({ nft }) => {
               alt=""
             />
           )}
-          <figcaption className="badge badge-success ">Live</figcaption>
+          <figcaption className="badge badge-success ">
+            {nft?.minting_status
+              .split(" ")
+              .map((word) => word[0].toUpperCase().concat(word.slice(1)))
+              .join("")}
+          </figcaption>
         </figure>
         <div className="pl-2 w-full">
           <div className="flex items-center py-1 text-sm">

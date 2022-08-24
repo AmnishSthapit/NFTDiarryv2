@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 import { getStrapiMedia } from "lib/media";
 
 const VerticalNFTCard = ({ nft, bg }) => {
-    const options = { year: "numeric", month: "short", day: "numeric" };
+  const options = { year: "numeric", month: "short", day: "numeric" };
 
   return (
     <div className={`card mb-10 md:mb-0 ${bg}`}>
@@ -17,7 +17,12 @@ const VerticalNFTCard = ({ nft, bg }) => {
             alt=""
           />
         )}
-        <figcaption className="badge badge-success ">Live</figcaption>
+        <figcaption className="badge badge-success ">
+          {nft?.minting_status
+            .split(" ")
+            .map((word) => word[0].toUpperCase().concat(word.slice(1)))
+            .join("")}
+        </figcaption>
       </figure>
       <div className="flex items-center py-2 text-sm">
         <Icon height={16} icon="ep:calendar" className="text-gray-400" />{" "}

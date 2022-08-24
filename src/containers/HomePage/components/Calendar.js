@@ -48,11 +48,16 @@ export const Calendar = () => {
                         />
                       )}
                       <figcaption className=" badge badge-success ">
-                        Sponsored
+                        {nft?.attributes?.minting_status
+                          .split(" ")
+                          .map((word) =>
+                            word[0].toUpperCase().concat(word.slice(1))
+                          )
+                          .join("")}
                       </figcaption>
                     </figure>
                     <div className="pl-3 w-full">
-                      <div className="flex">
+                      <div className="flex mt-3 lg:mt-0">
                         <h3 className="text-xl truncate">
                           {nft.attributes.title}
                         </h3>

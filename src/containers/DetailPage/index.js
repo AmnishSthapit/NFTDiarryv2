@@ -7,7 +7,6 @@ import { getStrapiMedia } from "lib/media";
 import parse from "html-react-parser";
 
 const DetailPage = ({ nftData }) => {
-
   return (
     <>
       <section>
@@ -47,7 +46,9 @@ const DetailPage = ({ nftData }) => {
                     icon="ep:calendar"
                     className="text-gray-400"
                   />{" "}
-                  <span className="pl-1 text-gray-400 whitespace-nowrap">Pre-sale:</span>
+                  <span className="pl-1 text-gray-400 whitespace-nowrap">
+                    Pre-sale:
+                  </span>
                   <span className="text-gray-600 ">
                     {" "}
                     {nftData?.presale_date}
@@ -55,7 +56,11 @@ const DetailPage = ({ nftData }) => {
                 </div>
                 <h2 className="border-0 p-0 mb-0">
                   {" "}
-                  Minting is {nftData?.minting_status}{" "}
+                  Minting is{" "}
+                  {nftData?.minting_status
+                    .split(" ")
+                    .map((word) => word[0].toUpperCase().concat(word.slice(1)))
+                    .join("")}{" "}
                   <span className="blink-me"></span>{" "}
                 </h2>
                 <div className="flex items-center pt-3 ">
