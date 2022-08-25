@@ -46,7 +46,7 @@ export const About = () => {
         <div className="container mx-auto">
           <div className="about">
             <h2 className="">Trending</h2>
-            {data.data?.length > 0 && (
+            {data?.data?.length > 0 && (
               <div className="flex lg:flex-row flex-col lg:justify-start justify-center items-center ">
                 <VerticalNFTCard nft={data?.data[0]?.attributes} bg="white" />
                 <div className="grid lg:grid-cols-2 gap-4 mt-2 lg:ml-2 w-full">
