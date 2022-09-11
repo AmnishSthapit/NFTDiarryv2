@@ -187,7 +187,7 @@ export const Calendar = () => {
             </div>
 
             <StickyBox className="max-w-xs" offsetTop={100}>
-              {images.length > 0 &&
+              {images?.length > 0 &&
                 images?.map((nftImg, i) => (
                   <div key={i} className="box mb-4">
                     <figure className="figure">
