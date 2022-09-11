@@ -11,6 +11,7 @@ import { fetchAPI } from "lib/api";
 
 export const Calendar = () => {
   const [all, setAll] = useState({});
+  const [images, setImages] = useState({});
   const [isActive, setActive] = useState("false");
   const handleToggle = () => {
     setActive(!isActive);
@@ -25,6 +26,18 @@ export const Calendar = () => {
         display_image: "*",
       },
     }).then((res) => setAll(res?.data));
+    fetchAPI("/sidebar", {
+      populate: {
+        sidebar_img: {
+          populate: "*",
+          nft_img: {
+            populate: "*",
+          },
+        },
+      },
+    }).then((res) =>
+      setImages(res?.data?.attributes?.sidebar_img?.data)
+    );
   }, []);
 
   return (
@@ -174,24 +187,18 @@ export const Calendar = () => {
             </div>
 
             <StickyBox className="max-w-xs" offsetTop={100}>
-              <div className="box mb-4">
-                <figure className="figure">
-                  <img
-                    src="https://global-uploads.webflow.com/61a98989a418f6f2acefef70/62c88fbe37579376f4da60eb_Formula%20X.gif"
-                    className="figure-img img-fluid rounded"
-                    alt=""
-                  />
-                </figure>
-              </div>
-              <div className="box">
-                <figure className="figure">
-                  <img
-                    src="https://global-uploads.webflow.com/61a98989a418f6f2acefef70/62bb2422b8029277fc976ca4_ezgif.com-gif-maker%20(13).gif"
-                    className="figure-img img-fluid rounded"
-                    alt=""
-                  />
-                </figure>
-              </div>
+              {images.length > 0 &&
+                images?.map((nftImg, i) => (
+                  <div key={i} className="box mb-4">
+                    <figure className="figure">
+                      <img
+                        src={nftImg?.attributes?.url}
+                        className="figure-img img-fluid rounded w-full"
+                        alt={nftImg?.attributes?.name}
+                      />
+                    </figure>
+                  </div>
+                ))}
             </StickyBox>
           </div>
         </div>
