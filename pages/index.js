@@ -6,7 +6,8 @@ import { getStrapiMedia } from "lib/media";
 
 export default function Home(props) {
   const seo =
-    props?.homepageData?.attributes.seo || props?.globalData?.attributes?.defaultSeo;
+    props?.homepageData?.attributes.seo ||
+    props?.globalData?.attributes?.defaultSeo;
   return (
     <AppWrapper footerData={props.footerData}>
       <Head>
@@ -25,15 +26,15 @@ export async function getStaticProps(context) {
       populate: {
         populate: "*",
         banner_nfts: {
-			populate: {
-				populate:"*",
-				nft:{
-					populate:{
-						populate:"*",
-						display_image:"*"
-					}
-				}
-			}
+          populate: {
+            populate: "*",
+            nft: {
+              populate: {
+                populate: "*",
+                display_image: "*",
+              },
+            },
+          },
         },
         seo: { populate: "*" },
       },
